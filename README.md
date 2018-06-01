@@ -10,7 +10,8 @@ _________
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'gull', github: 'petlove/gull'
+gem 'omniauth-google-oauth2'
+gem 'gull', git: 'https://github.com/petlove/gull.git'
 ```
 
 And then execute:

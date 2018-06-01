@@ -10,6 +10,8 @@ module Gull
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.email = auth.info.email
       user.password = Devise.friendly_token[0, 20]
+      # Fix for raccoon's custom validation...
+      user.is_active = true if user.has_attribute?(:is_active)    
     end
   end
 
@@ -21,11 +23,6 @@ module Gull
   def self.configuration
     @configuration ||= Configuration.new
   end
-
-  # Might be useful for testing...
-  # def self.reset
-  #   @configuration = Configuration.new
-  # end
 
   def self.configure
     yield(configuration)
