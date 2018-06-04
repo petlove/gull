@@ -11,7 +11,7 @@ Add this line to your application's Gemfile:
 
 ```ruby
 gem 'omniauth-google-oauth2'
-gem 'gull', git: 'https://github.com/petlove/gull.git'
+gem 'gull', git: 'git@github.com:petlove/gull.git'
 ```
 
 And then execute:
