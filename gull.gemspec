@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.authors       = ["ripfoghorn"]
   s.email         = ["sac@petlove.com.br"]
 
-  s.summary       = "Devise and google omniauth goodness for petlove apps"
+  s.summary       = "Devise and Google Omniauth goodness for Petlove apps"
   s.description   = "Runs user migrations, update user models, extends rails engine controllers and pops partials you can use for quick setting up of google sign in"
   s.homepage      = "https://github.com/petlove/gull"
 
