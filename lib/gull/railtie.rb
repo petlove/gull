@@ -8,7 +8,9 @@ module Gull
   class Railtie < Rails::Railtie
     railtie_name :gull
     rake_tasks do
-      Dir[File.join(File.dirname(__FILE__), 'tasks/*.rake')].each { |f| load f }
+      gull_rakedir_path = File.join(File.dirname(__FILE__), 'tasks/*.rake')
+      rake_tasks = Dir[gull_rakedir_path]
+      rake_tasks.each { |f| load f }
     end
   end
 end
