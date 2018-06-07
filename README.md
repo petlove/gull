@@ -11,7 +11,7 @@ Add this line to your application's Gemfile:
 
 ```ruby
 gem 'omniauth-google-oauth2'
-gem 'gull', github: 'petlove/gull'
+gem 'gull', git: 'git@github.com:petlove/gull.git'
 ```
 
 And then execute:
@@ -22,6 +22,9 @@ _________
 ## Usage
 
 To actually full-fledgedly use google sign in with Gull you need to follow some steps in order to configure your application properly.
+
+**Disclaimer:** Gull acts upon your **User Model** + **Devise** configuration, make sure you have those set up before trying to install it
+
 
 ### After installing the gem, run the migration as following:
 For Google Sign-in to work, your user model and schema needs to have two extra attributes, called `provider` and `uid`.
