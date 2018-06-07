@@ -1,0 +1,34 @@
+inherit_from: .rubocop_todo.yml
+
+Bundler/OrderedGems:
+  Exclude:
+    - 'Gemfile'
+
+Metrics/LineLength:
+  Max: 120
+
+Style/Documentation:
+  Enabled: false
+
+Metrics/MethodLength:
+  Max: 15
+
+Metrics/BlockLength:
+  Max: 30
+  Exclude:
+    - 'spec/**/*'
+
+Metrics/AbcSize:
+  Max: 30
+
+AllCops:
+  Exclude:
+    - Guardfile
+
+AllCops:
+  TargetRubyVersion: 2.4
+  DisplayCopNames: true
+  Exclude:
+    - 'vendor/**/*'
+    - 'Guardfile'
+    - 'db/**/*'
