@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.name          = 'gull'
   s.version       = Gull::VERSION
   s.authors       = ['ripfoghorn']
-  s.email         = ['sac@petlove.com.br']
+  s.email         = ['code@petlove.com.br']
 
   s.summary       = 'Devise and Google Omniauth goodness for Petlove apps'
   s.description   = 'Updates user models, extends rails and pops partials for quick setting up of google sign in'
