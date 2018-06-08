@@ -1,5 +1,5 @@
 # Gull
-## Easy Google Sign-in for PetLove Applications
+## Easy Google Sign-in for Ruby on Rails / Devise Applications
 
 ![Gull](https://www.iconshock.com/image/Stroke/Animals/gull)
 
@@ -17,6 +17,11 @@ gem 'gull', github: 'petlove/gull'
 And then execute:
 
     $ bundle install
+_________
+
+## Dependencies
+  This application assumes you're on [Rails](https://rubyonrails.org/) and has [Devise](https://github.com/plataformatec/devise) configured
+
 _________
 
 ## Usage
@@ -57,7 +62,8 @@ Open up your `config/initializers/devise.rb` file, in the section segmented as `
 config.omniauth :google_oauth2, 
                 Gull.configuration.google_client_id, 
                 Gull.configuration.google_client_secret,
-                hd: 'petlove.com.br', prompt: 'select_account'
+                hd: '<YOUR_DOMAIN>', prompt: 'select_account'
+        # hardcoded domain lock ^ 
 ```
 
 ### Configuring your User model: 
