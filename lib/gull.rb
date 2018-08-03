@@ -20,7 +20,7 @@ module Gull
       # Setting provider and uid values for google oauth
       user.provider = auth.provider if user.has_attribute?(:provider)
       user.uid = auth.uid if user.has_attribute?(:uid)
-      user.skip_confirmation! if user.respond_to?('skip_confirmation!')
+      user.skip_confirmation! if user.respond_to?(:skip_confirmation!)
     end
   end
 
