@@ -1,5 +1,5 @@
 # Gull
-## Easy Google Sign-in for Ruby on Rails / Devise Applications
+## Easy Google Sign-in for Rails + Devise Applications
 
 ![Gull](https://www.iconshock.com/image/Stroke/Animals/gull)
 
@@ -99,4 +99,4 @@ This one is even simpler, just add this to the view you want to render the butto
   <%= render "gull/sign_in_button" %>
 ```
 
-... And *Voilá*, you have a Google Sign-in in your PetLove application, give yourself a good pat on the back, you're the champ! 
+... And *Voilá*, you have a Google Sign-in in your Rails + Devise application, give yourself a good pat on the back, you're the champ! 
