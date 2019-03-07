@@ -9,9 +9,10 @@ module Gull
 
   # To be extended by the User model
   def from_omniauth(auth)
-    where(email: auth.info.email).first_or_create do |user|
+    user_email = auth.info.email || auth.email
+    where(email: user_email).first_or_create do |user|
       # Setting user's first values (unless it already have it populated)
-      user.email ||= auth.info.email
+      user.email ||= user_email
       user.password ||= Devise.friendly_token[0, 20]
 
       # Setting user as active, skipping email confirmation section
