@@ -7,8 +7,7 @@ jobs:
       - checkout
       - run:
           name: Bundle Install
-          command: gem install bundler && bundle update --bundler
-          command: bundle check || bundle install
+          command: gem install bundler -v '2.0.2' && bundle check || bundle install
       - run:
           name: Rubocop
           command: bundle exec rubocop
