@@ -8,13 +8,13 @@
 
 * Improvements
 
-  *Marcelo Toledo*
+  *Igor Soares*
 
 ## Gull 1.0.1 (Aug 3, 2018)
 
 * Bump version
 
-  *Marcelo Toledo*
+  *Igor Soares*
 
 ## Gull 0.0.0 (Jun 6, 2018)
 
