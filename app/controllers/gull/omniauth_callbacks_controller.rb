@@ -4,8 +4,8 @@ module Gull
   class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     def google_oauth2
       omni_auth = request.env['omniauth.auth']
-                  .except('extra')
-                  .merge(request.env['omniauth.auth']['extra']['id_info'])
+                         .except('extra')
+                         .merge(request.env['omniauth.auth']['extra']['id_info'])
       @user = User.from_omniauth(omni_auth)
 
       if @user.persisted?
