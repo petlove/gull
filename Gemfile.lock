@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    gull (1.0.3)
+    gull (1.0.4)
 
 GEM
   remote: https://rubygems.org/

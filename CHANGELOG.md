@@ -1,4 +1,10 @@
-# Gull 1.0.3 (Jul 30 , 2019)
+# Gull 1.0.4 (Aug 07 , 2019)
+
+* Change methods to create users
+
+  *Marcelo Toledo*
+
+## Gull 1.0.3 (Jul 30 , 2019)
 
 * Update gems because alert security vulnerabilities
 

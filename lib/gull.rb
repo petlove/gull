@@ -9,7 +9,7 @@ module Gull
 
   # To be extended by the User model
   def from_omniauth(auth)
-    user_email = auth.info.email || auth.email
+    user_email = auth&.[]('email') || auth&.[]('info')&.[]('email')
     where(email: user_email).first_or_create do |user|
       # Setting user's first values (unless it already have it populated)
       user.email ||= user_email
@@ -19,8 +19,8 @@ module Gull
       user.is_active = true if user.has_attribute?(:is_active)
 
       # Setting provider and uid values for google oauth
-      user.provider = auth.provider if user.has_attribute?(:provider)
-      user.uid = auth.uid if user.has_attribute?(:uid)
+      user.provider = auth&.[]('provider') if user.has_attribute?(:provider)
+      user.uid = auth&.[]('uid') if user.has_attribute?(:uid)
       user.skip_confirmation! if user.respond_to?(:skip_confirmation!)
     end
   end
