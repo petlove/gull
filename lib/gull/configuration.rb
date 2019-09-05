@@ -19,12 +19,7 @@ module Gull
     end
 
     def devise_omniauth_config
-      [
-        :google_oauth2,
-        Gull.configuration.google_client_id,
-        Gull.configuration.google_client_secret,
-        hd: 'petlove.com.br', prompt: 'select_account'
-      ]
+      [:google_oauth2, @google_client_id, @google_client_secret, hd: 'petlove.com.br', prompt: 'select_account']
     end
 
     private
