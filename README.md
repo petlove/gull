@@ -66,7 +66,7 @@ end
 
 or using default values:
 ```ruby
-  Gull.configure
+  Gull.start!
 ```
 
 **TIP:** for easily referrable configuration, you can put the configuration block above in the first lines of your `config/initializers/devise.rb` file

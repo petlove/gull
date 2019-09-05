@@ -34,6 +34,10 @@ module Gull
     @configuration ||= Configuration.new
   end
 
+  def self.start!
+    configuration&.after_config!
+  end
+
   def self.configure
     yield(configuration)
     configuration.after_config!
@@ -41,6 +45,6 @@ module Gull
   # rubocop:enable DuplicateMethods
 
   def self.devise_omniauth_config
-    @configuration&.devise_omniauth_config
+    configuration&.devise_omniauth_config
   end
 end
