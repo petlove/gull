@@ -65,6 +65,7 @@ end
 ```
 
 or using default values:
+
 ```ruby
   Gull.start!
 ```
@@ -84,6 +85,7 @@ config.omniauth :google_oauth2,
 ```
 
 or using default values:
+
 ```ruby
   config.omniauth *Gull.devise_omniauth_config
 ```
