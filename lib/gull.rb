@@ -3,6 +3,7 @@
 require 'gull/version'
 require 'gull/engine'
 require 'gull/configuration'
+require 'omniauth-google-oauth2'
 
 module Gull
   require 'gull/railtie' if defined?(Rails)
