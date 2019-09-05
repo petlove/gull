@@ -15,7 +15,7 @@ module Gull
 
     def after_config!
       @logo_style = 'margin-top:60px;' if @logo_name == DEFAULT_LOGO
-      Rails.application.config.assets.precompile += ['peto.png', @logo_name] if defined?(Rails)
+      Rails.application.config.assets.precompile += ['peto.png', 'sessions.scss', @logo_name] if defined?(Rails)
     end
   end
 end
