@@ -49,7 +49,7 @@ By default, this is the login page:
 
 ![image](https://i.ibb.co/mqH8PRt/screencapture-localhost-3100-users-sign-in-2019-09-05-14-49-32.png)
 
-**IMPORTANT**: In your project you have to import gull sessions in any sass file with `@import gull/sessions`.
+**IMPORTANT**: In your project you have to import gull sessions in any sass file with `@import 'gull/sessions'`.
 
 ### Google API Keys configuration inside Gull:
 
