@@ -63,6 +63,12 @@ Gull.configure do |config|
   config.logo_style = 'margin-top: 100px;'
 end
 ```
+
+or using default values:
+```ruby
+  Gull.configure
+```
+
 **TIP:** for easily referrable configuration, you can put the configuration block above in the first lines of your `config/initializers/devise.rb` file
 
 ### Configuring devise:
@@ -75,6 +81,11 @@ config.omniauth :google_oauth2,
                 Gull.configuration.google_client_secret,
                 hd: '<YOUR_DOMAIN>', prompt: 'select_account'
         # hardcoded domain lock ^
+```
+
+or using default values:
+```ruby
+  config.omniauth *Gull.devise_omniauth_config
 ```
 
 ### Configuring your User model:
