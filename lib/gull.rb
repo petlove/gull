@@ -3,6 +3,7 @@
 require 'gull/version'
 require 'gull/engine'
 require 'gull/configuration'
+require 'omniauth-google-oauth2'
 
 module Gull
   require 'gull/railtie' if defined?(Rails)
@@ -34,9 +35,17 @@ module Gull
     @configuration ||= Configuration.new
   end
 
+  def self.start!
+    configuration&.after_config!
+  end
+
   def self.configure
     yield(configuration)
     configuration.after_config!
   end
   # rubocop:enable DuplicateMethods
+
+  def self.devise_omniauth_config
+    configuration&.devise_omniauth_config
+  end
 end

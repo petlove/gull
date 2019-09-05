@@ -49,7 +49,7 @@ By default, this is the login page:
 
 ![image](https://i.ibb.co/mqH8PRt/screencapture-localhost-3100-users-sign-in-2019-09-05-14-49-32.png)
 
-**IMPORTANT**: In your project you have to import gull sessions in any sass file with `@import gull/sessions`.
+**IMPORTANT**: In your project you have to import gull sessions in any sass file with `@import 'gull/sessions'`.
 
 ### Google API Keys configuration inside Gull:
 
@@ -63,6 +63,13 @@ Gull.configure do |config|
   config.logo_style = 'margin-top: 100px;'
 end
 ```
+
+or using default values:
+
+```ruby
+  Gull.start!
+```
+
 **TIP:** for easily referrable configuration, you can put the configuration block above in the first lines of your `config/initializers/devise.rb` file
 
 ### Configuring devise:
@@ -75,6 +82,12 @@ config.omniauth :google_oauth2,
                 Gull.configuration.google_client_secret,
                 hd: '<YOUR_DOMAIN>', prompt: 'select_account'
         # hardcoded domain lock ^
+```
+
+or using default values:
+
+```ruby
+  config.omniauth *Gull.devise_omniauth_config
 ```
 
 ### Configuring your User model:
