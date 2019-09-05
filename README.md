@@ -42,6 +42,15 @@ https://developers.google.com/identity/sign-in/web/sign-in#specify_your_apps_cli
 
 **TIP:** do not forget to add the google sign-in callback `Authorized redirect URIs` to your application's google_oauth callback (luckily abstracted away via Gull), something along the lines of `https://<application_domain>/users/auth/google_oauth2/callback`
 
+### Login page
+
+In /app/views/devise/new.html.erb is defined the default login page. If you want, you can change the settings `logo_name` and `logo_style`.
+By default, this is the login page:
+
+![image](https://i.ibb.co/mqH8PRt/screencapture-localhost-3100-users-sign-in-2019-09-05-14-49-32.png)
+
+**IMPORTANT**: In your project you have to import gull sessions in any sass file with `@import gull/sessions`.
+
 ### Google API Keys configuration inside Gull:
 
 API keys must be configured in the gem setup. You can do this anywhere in your application before you make API calls using the gem.
@@ -102,10 +111,3 @@ This one is even simpler, just add this to the view you want to render the butto
 ```
 
 ... And *Voilá*, you have a Google Sign-in in your Rails + Devise application, give yourself a good pat on the back, you're the champ!
-
-### Login page
-
-In /app/views/devise/new.html.erb is defined the default login page. If you want, you can change the settings `logo_name` and `logo_style`.
-By default, this is the login page:
-
-![image](https://i.ibb.co/mqH8PRt/screencapture-localhost-3100-users-sign-in-2019-09-05-14-49-32.png)
