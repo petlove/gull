@@ -1,0 +1,85 @@
+/* @icon-social-google: "\e933"; */
+
+/*Font config
+***************************************************/
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'petlove' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1.8 + 0rem;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.body {
+  padding: 100px;
+  background-color: #5a1e82;
+  height: 100vh;
+}
+
+.round-background {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.logo {
+  text-align: center;
+  margin: auto;
+  padding-top: 40px;
+  margin-bottom: 50px;
+}
+
+.btn-google_oauth2 {
+  background: asset-url('peto.png') #5a1e82 no-repeat 0px 10px;
+  display: block;
+  padding: 20px;
+  margin: auto;
+  width: 190px;
+  border: none;
+  height: 100px;
+  color: #fff;
+  text-align: center;
+  &:hover {
+    background-color: #5a1e82;
+    color: #FFF;
+    outline: none;
+  }
+  &:link,
+  &:active,
+  &:focus,
+  &:visited {
+    background-color: #5a1e82;
+    color: #FFF;
+    outline: none;
+    text-decoration: none;
+  }
+
+  .title-socials {
+    font-size: 0.85 + 0rem;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+  }
+  .title-google {
+    top: 0px;
+  }
+}
+
+.icon-social-gp {}
+
+.caption {
+  text-align: center;
+  padding-top: 40px;
+  color: #fff
+}

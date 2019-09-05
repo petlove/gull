@@ -36,6 +36,7 @@ module Gull
 
   def self.configure
     yield(configuration)
+    configuration.after_config!
   end
   # rubocop:enable DuplicateMethods
 end
