@@ -18,6 +18,15 @@ module Gull
       Rails.application.config.assets.precompile += ['peto.png', @logo_name] if defined?(Rails)
     end
 
+    def devise_omniauth_config
+      [
+        :google_oauth2,
+        Gull.configuration.google_client_id,
+        Gull.configuration.google_client_secret,
+        hd: 'petlove.com.br', prompt: 'select_account'
+      ]
+    end
+
     private
 
     def build_google_client_id!

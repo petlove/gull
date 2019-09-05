@@ -39,4 +39,8 @@ module Gull
     configuration.after_config!
   end
   # rubocop:enable DuplicateMethods
+
+  def self.devise_omniauth_config
+    @configuration&.devise_omniauth_config
+  end
 end
