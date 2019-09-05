@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    gull (1.0.5)
+    gull (1.0.6)
       omniauth-google-oauth2 (~> 0.8.0)
       omniauth-rails_csrf_protection (~> 0.1.2)
 
@@ -193,6 +193,7 @@ DEPENDENCIES
   bundler (~> 2.0.2)
   devise
   gull!
+  nokogiri (>= 1.10.4)
   omniauth-google-oauth2
   omniauth-rails_csrf_protection
   rails
