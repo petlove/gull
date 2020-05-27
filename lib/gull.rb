@@ -30,7 +30,7 @@ module Gull
   class << self
     attr_accessor :configuration
   end
-  # rubocop:disable DuplicateMethods
+  # rubocop:disable Lint/DuplicateMethods
   def self.configuration
     @configuration ||= Configuration.new
   end
@@ -43,7 +43,7 @@ module Gull
     yield(configuration)
     configuration.after_config!
   end
-  # rubocop:enable DuplicateMethods
+  # rubocop:enable Lint/DuplicateMethods
 
   def self.devise_omniauth_config
     configuration&.devise_omniauth_config
