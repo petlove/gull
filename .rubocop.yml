@@ -4,7 +4,7 @@ Bundler/OrderedGems:
   Exclude:
     - 'Gemfile'
 
-Metrics/LineLength:
+Layout/LineLength:
   Max: 120
 
 Style/Documentation:
@@ -18,12 +18,11 @@ Metrics/BlockLength:
   Exclude:
     - 'spec/**/*'
 
+Metrics/CyclomaticComplexity:
+  Max: 13
+
 Metrics/AbcSize:
   Max: 30
-
-AllCops:
-  Exclude:
-    - Guardfile
 
 AllCops:
   TargetRubyVersion: 2.4
