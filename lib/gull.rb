@@ -9,7 +9,7 @@ module Gull
   require 'gull/railtie' if defined?(Rails)
 
   # To be extended by the User model
-  def from_omniauth(auth)
+  def from_omniauth(auth) # rubocop:disable Metrics/PerceivedComplexity
     user_email = auth&.[]('email') || auth&.[]('info')&.[]('email')
     where(email: user_email).first_or_create do |user|
       # Setting user's first values (unless it already have it populated)

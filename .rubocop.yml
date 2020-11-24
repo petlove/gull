@@ -24,6 +24,9 @@ Metrics/CyclomaticComplexity:
 Metrics/AbcSize:
   Max: 30
 
+Gemspec/RequiredRubyVersion:
+  Enabled: false
+
 AllCops:
   TargetRubyVersion: 2.4
   DisplayCopNames: true
