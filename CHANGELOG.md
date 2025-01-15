@@ -1,3 +1,6 @@
+# Gull 2.0.0
+* Update omniauth-google-oauth2 to v1
+
 # Gull 1.0.4 (Aug 07 , 2019)
 
 * Change methods to create users

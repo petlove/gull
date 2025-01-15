@@ -18,9 +18,9 @@ Gem::Specification.new do |s|
   s.executables   = s.files.grep(%r{^exe/}) { |f| File.basename(f) }
   s.require_paths = ['lib']
 
-  s.add_dependency 'omniauth-google-oauth2', '~> 0.8.0'
-  s.add_dependency 'omniauth-rails_csrf_protection', '~> 0.1.2'
-
-  s.add_development_dependency 'bundler', '~> 2.0.2'
-  s.add_development_dependency 'rake', '~> 13.0'
+  s.add_dependency 'devise'
+  s.add_dependency 'omniauth-google-oauth2', '~> 1.0'
+  s.add_dependency 'omniauth-rails_csrf_protection'
+  s.add_dependency 'rails'
+  s.add_dependency 'rake'
 end
