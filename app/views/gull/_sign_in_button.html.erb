@@ -1,3 +1,5 @@
 <div class="sign_in_button">
-    <%= button_to "Entre com o Google!", user_omniauth_authorize_path(provider: :google_oauth2), class: "btn btn-lg btn-danger btn-block" %>
+  <%= form_tag user_omniauth_authorize_path(provider: :google_oauth2), method: :post do %>
+    <%= submit_tag "Entre com o Google!", class: "btn btn-lg btn-danger btn-block" %>
+  <% end %>
 </div>
