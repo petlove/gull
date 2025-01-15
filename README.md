@@ -10,6 +10,8 @@ _________
 Add this line to your application's Gemfile:
 
 ```ruby
+
+gem 'omniauth-rails_csrf_protection', '~> 1.0'
 gem 'omniauth-google-oauth2'
 gem 'gull', github: 'petlove/gull'
 ```
