@@ -1,3 +1,6 @@
+# Gull 2.0.0.1
+* Remove requirement to explicitly add to project's gemfile rails_csrf_protection gem
+
 # Gull 2.0.0
 * Update omniauth-google-oauth2 to v1
 
