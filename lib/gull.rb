@@ -4,6 +4,7 @@ require 'gull/version'
 require 'gull/engine'
 require 'gull/configuration'
 require 'omniauth-google-oauth2'
+require 'omniauth/rails_csrf_protection'
 
 module Gull
   require 'gull/railtie' if defined?(Rails)
