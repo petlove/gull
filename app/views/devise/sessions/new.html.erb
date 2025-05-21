@@ -5,7 +5,7 @@
 
   <%- if devise_mapping.omniauthable? %>
     <%- resource_class.omniauth_providers.each do |provider| %>
-      <%= button_to(omniauth_authorize_path(resource_name, provider), html_options = { class: "btn-#{provider}" }) do %>
+      <%= button_to(omniauth_authorize_path(resource_name, provider), html_options = { class: "btn-#{provider}", data: { turbo: false } }) do %>
         <span class="icon-social-gp"></span>
         <span class="title-socials title-<%= provider %>">Sign in with <%= OmniAuth::Utils.camelize(provider) %></span>
         <div class="caption">clique aqui</div>
